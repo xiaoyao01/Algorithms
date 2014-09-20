@@ -2,7 +2,7 @@
 
 void *memCpy(void *dest, void *src, size_t count)
 {
-	char *tmp = (char *) dest;
+	char *tmp = (char *) dest; //gcc编译必须要强制类型转换，vs2010可以不需要
 	const char *s = (const char *)src;
 	while(count--)
 	{
