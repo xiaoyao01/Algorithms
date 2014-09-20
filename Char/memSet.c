@@ -3,7 +3,7 @@
 //用途：清空字符数组， 以字节为单位，也可以清空结构体
 void *memSet(void *buffer, int c, size_t count)
 {
-	char *s = buffer;
+	char *s = buffer;  //此处gcc编译器通不过，必须进行强制类型转换；vs2010可以通过编译
 	while(count--)
 	{
 		*s++ = c;
